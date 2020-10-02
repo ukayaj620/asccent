@@ -4,6 +4,25 @@
   @apply box-border;
 }
 
+h1 {
+  @apply font-header text-white text-2xl;
+}
+
+h1.active {
+  @apply text-primary;
+}
+
+a {
+  @apply font-header text-white text-lg;
+}
+
+a.active {
+  @apply text-primary;
+}
+
+a.link {
+  @apply underline;
+}
 
 @tailwind components;
 
