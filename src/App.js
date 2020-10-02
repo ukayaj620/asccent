@@ -1,8 +1,13 @@
 import React from 'react';
+import NavBar from './components/NavBar';
+import image from './helpers/image';
 
 const App = () => {
   return (
-    <div clasName="bg-black">Hello</div>
+    <div className="relative flex flex-col w-full">
+      <NavBar />
+      <img style={{ marginTop: '-5rem' }} src={image.load('background')}/>
+    </div>
   );
 }
 
