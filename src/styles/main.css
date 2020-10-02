@@ -4,6 +4,13 @@
   @apply box-border;
 }
 
+h1 {
+  @apply font-header text-white text-2xl;
+}
+
+h1.active {
+  @apply text-primary;
+}
 
 @tailwind components;
 
