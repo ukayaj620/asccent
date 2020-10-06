@@ -47,7 +47,7 @@ const Drawer = ({ open, close }) => {
   );
 };
 
-const NavBar = () => {
+const NavBar = ({ active }) => {
   const [_drawerOpen, _setDrawerOpen] = useState(false);
   const _height = useScrollHeight();
   const _location = useLocation();
@@ -56,17 +56,19 @@ const NavBar = () => {
   const _openDrawer = () => _setDrawerOpen(true);
   const _closeDrawer = () => _setDrawerOpen(false);
 
+  const _determineActive = () => _height > 80 || active
+
   return (
-    <nav class={`flex-row-reverse lg:flex-row ${_height > 80 ? 'navbar active' : 'navbar unactive'}`}>
+    <nav class={`flex-row-reverse lg:flex-row ${_determineActive() ? 'navbar active' : 'navbar unactive'}`}>
       <div className="flex flex-row justify-center items-center">
-        <img className="w-12 lg:w-16 lg:mr-4" src={image.load(_height > 80 ? 'brand' : 'brand-white')} />
-        <h1 className={`hidden lg:flex ${_height > 80 ? 'active' : ''}`}>Asccent Automobile</h1>
+        <img className="w-12 lg:w-16 lg:mr-4" src={image.load(_determineActive() ? 'brand' : 'brand-white')} />
+        <h1 className={`hidden lg:flex ${_determineActive()  ? 'active' : ''}`}>Asccent Automobile</h1>
       </div>
       <Drawer open={_drawerOpen} close={_closeDrawer} />
       <div onClick={_openDrawer} className="lg:hidden">
         <img
           className="w-8"
-          src={image.load(_height > 80 ? 'menu-active' : 'menu-unactive')}
+          src={image.load(_determineActive() ? 'menu-active' : 'menu-unactive')}
           alt="Menu"
         />
       </div>
@@ -75,7 +77,7 @@ const NavBar = () => {
           <NavLink 
             key={`#nav-link-${name}-${index}`}
             to={path}
-            className={`px-2 ${_height > 80 ? 'active' : ''}`}
+            className={`px-2 ${_determineActive() ? 'active' : ''}`}
             activeClassName="link"
             isActive={() => _activePath(path)}
           >
