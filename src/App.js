@@ -11,7 +11,6 @@ const App = () => {
         <meta name="description" content="Codenitiva, Platform for Developers to sharing knowledge" />
       </Helmet>
       <BrowserRouter>
-        <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>

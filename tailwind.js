@@ -9,7 +9,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#14008C'
+        primary: '#14008C',
+        muted: '#979797',
       }
     },
   },
