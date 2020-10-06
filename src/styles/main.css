@@ -27,7 +27,7 @@ a.link {
 @tailwind components;
 
 .navbar {
-  @apply h-20 flex flex-row justify-between items-center px-8 top-0 sticky z-10 transition duration-200 ease-in-out font-header;
+  @apply h-20 flex flex-row justify-between items-center px-4 top-0 sticky z-10 transition duration-200 ease-in-out font-header;
 }
 
 .navbar.unactive {
