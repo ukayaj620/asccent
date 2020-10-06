@@ -59,7 +59,7 @@ const NavBar = () => {
   return (
     <nav class={`flex-row-reverse lg:flex-row ${_height > 80 ? 'navbar active' : 'navbar unactive'}`}>
       <div className="flex flex-row justify-center items-center">
-        <img className="w-16 h-16 lg:mr-4" src={image.load(_height > 80 ? 'brand' : 'brand-white')} />
+        <img className="w-12 lg:w-16 lg:mr-4" src={image.load(_height > 80 ? 'brand' : 'brand-white')} />
         <h1 className={`hidden lg:flex ${_height > 80 ? 'active' : ''}`}>Asccent Automobile</h1>
       </div>
       <Drawer open={_drawerOpen} close={_closeDrawer} />
