@@ -1,18 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar';
+import About from './pages/About';
 import Home from './pages/Home';
 
 const App = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen">
-      <Helmet titleTemplate="Codenitiva | %s" defaultTitle="Codenitiva">
-        <meta name="description" content="Codenitiva, Platform for Developers to sharing knowledge" />
+      <Helmet titleTemplate="Asccent | %s" defaultTitle="Asccent">
+        <meta name="description" content="Amazing Asccent" />
       </Helmet>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
         </Switch>
       </BrowserRouter>
     </div>
