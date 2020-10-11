@@ -12,6 +12,16 @@ h1.active {
   @apply text-primary;
 }
 
+h2 {
+  @apply text-xl text-primary font-header;
+}
+
+@screen lg {
+  h2 {
+    @apply text-3xl;
+  }
+}
+
 a {
   @apply font-header text-white text-lg;
 }
@@ -42,6 +52,10 @@ a.link {
 
 .navbar.active {
   @apply bg-white;
+}
+
+.video-container {
+  @apply py-8 bg-gray-100;
 }
 
 @tailwind utilities;
