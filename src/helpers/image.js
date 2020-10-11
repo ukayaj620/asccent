@@ -1,8 +1,12 @@
 export default {
   load(name) {
     switch (name) {
-      case 'background':
-        return require('../assets/background.svg');
+      case 'bg_home':
+        return require('../assets/backgrounds/home.svg');
+      case 'bg_contact':
+        return require('../assets/backgrounds/contact_us.jpg');
+      case 'bg_about':
+        return require('../assets/backgrounds/about_us.jpg')
       case 'brand':
         return require('../assets/asccent.svg');
       case 'brand-white':
