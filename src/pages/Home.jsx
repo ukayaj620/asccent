@@ -6,7 +6,11 @@ const Home = () => {
   return (
     <div>
       <NavBar />
-      <img style={{ marginTop: '-5rem' }} src={image.load('background')}/>
+      <img 
+        className="h-full" 
+        style={{ marginTop: '-5rem' }} 
+        src={image.load('bg_home')}
+      />
     </div>
   );
 };
