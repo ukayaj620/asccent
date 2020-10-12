@@ -9,6 +9,7 @@ const Contact = () => {
       <img
         style={{ marginTop: '-5rem' }} 
         src={image.load('bg_contact')}
+        alt="Contact Distinguished Background"
       />
     </div>
   );

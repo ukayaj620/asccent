@@ -13,6 +13,7 @@ const Home = () => {
         className="h-full" 
         style={{ marginTop: '-5rem' }} 
         src={image.load('bg_home')}
+        alt="Home Superpower Background"
       />
       <div className="flex flex-col items-center video-container">
         <h2 className="my-4">Upcoming Event</h2>
