@@ -9,6 +9,7 @@ const About = () => {
       <img
         style={{ marginTop: '-5rem' }} 
         src={image.load('bg_about')}
+        alt="About Amazing Background"
       />
     </div>
   );

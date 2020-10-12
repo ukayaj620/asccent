@@ -4,7 +4,6 @@ import useScrollHeight from '../hooks/useScrollHeight';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 
 const Drawer = ({ open, close }) => {
-  const _history = useHistory();
   const _location = useLocation();
 
   const _activePath = (path) => path === _location.pathname;
