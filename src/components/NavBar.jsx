@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import image from '../helpers/image';
 import useScrollHeight from '../hooks/useScrollHeight';
-import { NavLink, useLocation, useHistory } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Drawer = ({ open, close }) => {
   const _location = useLocation();
@@ -60,7 +60,7 @@ const NavBar = ({ active }) => {
   return (
     <nav class={`flex-row-reverse lg:flex-row ${_determineActive() ? 'navbar active' : 'navbar unactive'}`}>
       <div className="flex flex-row justify-center items-center">
-        <img className="w-12 lg:w-16 lg:mr-4" src={image.load(_determineActive() ? 'brand' : 'brand-white')} />
+        <img className="w-12 lg:w-16 lg:mr-4" src={image.load(_determineActive() ? 'brand' : 'brand-white')} alt="asccent" />
         <h1 className={`hidden lg:flex ${_determineActive()  ? 'active' : ''}`}>Asccent Automobile</h1>
       </div>
       <Drawer open={_drawerOpen} close={_closeDrawer} />
